@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<launch>
+
+    <!-- 启动相机节点  -->
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch"/>
+
+    <!-- 启动人脸识别节点  -->
+    <node pkg="castlex_vision_detector" name="astra_face_detector" type="astra_face_detector.py" output="screen">
+     <!-- <remap from="原话题" to="新话题" /> -->
+        <remap from="input_rgb_image" to="/usb_cam/image_raw" />      
+        <rosparam>
+            haar_scaleFactor: 1.2
+            haar_minNeighbors: 2
+            haar_minSize: 40
+            haar_maxSize: 60
+        </rosparam>
+        <!-- haarcascade_frontalface_default.xml：这是用于人脸检测的默认级联分类器模型。它是OpenCV中最常用的人脸检测模型之一，用于在图片或视频中检测正脸。 -->
+        <param name="cascade_1" value="$(find castlex_vision_detector)/data/haar_detectors/haarcascade_frontalface_alt.xml" />
+        <!-- haarcascade_profileface.xml: 用于侧脸检测的级联分类器模型。它可以用于检测图像或视频中的侧脸。 -->
+        <param name="cascade_2" value="$(find castlex_vision_detector)/data/haar_detectors/haarcascade_profileface.xml" />
+    </node>
+
+    <!-- 启动订阅cv_bridge_image话题  -->
+    <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view" args="/cv_bridge_image"/>
+
+</launch>

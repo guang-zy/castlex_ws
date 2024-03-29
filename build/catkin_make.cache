@@ -1,0 +1,2 @@
+beginner_tutorials:castlex_vision_detector:communication_tutorials:find-object-master:robot_vision
+-DCATKIN_DEVEL_PREFIX=/home/zy/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zy/catkin_ws/install -G Unix Makefiles
