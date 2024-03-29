@@ -1,3 +1,8 @@
 环境为ubuntu 16.04.7
 
-测试CV_Bridge:usb_opencv_test.launch 人脸检测：usb_face_detector.launch 笑脸检测：usb_smile.launch 人眼检测：usb_eye_detector.launch 二维码检测：ar_track_camera.launch 物体追踪：usb_motion_detector.launch
+测试CV_Bridge:usb_opencv_test.launch 
+人脸检测：usb_face_detector.launch
+笑脸检测：usb_smile.launch 
+人眼检测：usb_eye_detector.launch 
+二维码检测：ar_track_camera.launch 
+物体追踪：usb_motion_detector.launch
