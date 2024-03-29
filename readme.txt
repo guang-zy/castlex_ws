@@ -1,4 +1,5 @@
 环境为ubuntu 16.04.7
+代码更换至其他虚拟机,把src下的功能包放到工作空间下，再重新catkin_make
 
 在功能包castlex_vision_detector
 测试CV_Bridge:usb_opencv_test.launch 
