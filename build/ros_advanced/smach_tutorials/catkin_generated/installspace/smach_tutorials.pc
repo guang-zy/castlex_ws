@@ -1,0 +1,8 @@
+prefix=/home/zy/catkin_ws/install
+
+Name: smach_tutorials
+Description: Description of smach_tutorials
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

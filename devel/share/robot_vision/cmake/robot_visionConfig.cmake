@@ -67,7 +67,7 @@ set(robot_vision_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(robot_vision_SOURCE_PREFIX /home/zy/catkin_ws/src/robot_vision)
+  set(robot_vision_SOURCE_PREFIX /home/zy/catkin_ws/src/robot_perception/robot_vision)
   set(robot_vision_DEVEL_PREFIX /home/zy/catkin_ws/devel)
   set(robot_vision_INSTALL_PREFIX "")
   set(robot_vision_PREFIX ${robot_vision_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'robot_vision' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'robot_vision' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/zy/catkin_ws/src/robot_vision/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'robot_vision' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/zy/catkin_ws/src/robot_perception/robot_vision/${idir}'.  ${_report}")
     endif()
     _list_append_unique(robot_vision_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/zy/catkin_ws/devel/lib;/home/zy/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/zy/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

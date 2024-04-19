@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zy/catkin_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/zy/catkin_ws/src/castlex_voice_system/include/**",
+        "/home/zy/catkin_ws/src/cv_pkg/include/**",
+        "/home/zy/catkin_ws/src/find-object-master/include/**",
+        "/home/zy/catkin_ws/src/robot_voice/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
